@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 09:43:40 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/19 10:52:26 by ldes-cou         ###   ########.fr       */
+/*   Created: 2020/11/19 10:53:29 by ldes-cou          #+#    #+#             */
+/*   Updated: 2020/11/19 11:08:00 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char *strrchr(const char *s, int c)
+int strncmp(const char *s1, const char *s2, size_t n)
 {
 	int i;
-	
+
 	i = 0;
-	ft_strlen(s)
-	while(*s)
-	{
-		if(s[i] == c)
-			return((char *)s + i);
+	while(i < n && s1[i] == s2[i])
 		i++;
-	}
-	if(s[i] == c)
-		return((char *)s + i);
-	return(NULL);
+	return(s1 - s2);
 }
 
-
-				
