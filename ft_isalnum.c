@@ -6,7 +6,7 @@
 /*   By: ldes-cou <ldes-cou>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 21:37:07 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/18 21:37:09 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/19 15:36:20 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int ft_isalnum(int c)
 {
-	return(ft_isdigit || ft_isalpha);
+	return(ft_isdigit(c) || ft_isalpha(c));
 }

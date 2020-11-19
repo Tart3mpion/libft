@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 09:29:55 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/19 15:54:53 by ldes-cou         ###   ########.fr       */
+/*   Created: 2020/11/19 14:20:56 by ldes-cou          #+#    #+#             */
+/*   Updated: 2020/11/19 15:45:59 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char *strchr(const char *s, int c)
+int	atoi(const char *str)
 {
 	int i;
+	int nb;
+	int sign;
 
+	nb = 0;
 	i = 0;
-	while(*s)
-	{
-		if(s[i] == c)
-			return((char *)s + i);
+	while((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
 		i++;
-
+	if(str[i] == '-')
+		sign = -1;
+	else if(str[i] == '+')
+		sign = 1;
+	while(ft_isdigit(str[i]) == 1)
+			nb = nb * 10 + str[i++] - 48;
 	}
-	if(s[i] == c)
-		return((char *)s + i);
-	return(NULL);
+	return(nb * sign);
 }
+
+			
+
+	
+		
+	
+
+		
+
