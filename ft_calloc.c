@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 15:55:24 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/20 11:56:27 by ldes-cou         ###   ########.fr       */
+/*   Created: 2020/11/20 11:56:49 by ldes-cou          #+#    #+#             */
+/*   Updated: 2020/11/20 12:42:37 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-
-void *memset(void *b, int c, size_t len)
+void	*calloc(size_t count, size_t size)
 {
-	size_t i;
-
+	size_t	i;
+	void *str;
+	
 	i = 0;
-	while(i < len)
+	if(count == 0 || size == 0)
+		return (NULL);
+	str = malloc(size * count);
+	while(i < count)
 	{
-		b[i] = c;
+		(char *)str[i] = 0;
 		i++;
 	}
-	return((unsigned char *)b);
+	return (str);
 }
+

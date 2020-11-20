@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strup.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 15:55:24 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/20 11:56:27 by ldes-cou         ###   ########.fr       */
+/*   Created: 2020/11/20 11:12:02 by ldes-cou          #+#    #+#             */
+/*   Updated: 2020/11/20 11:30:07 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void *memset(void *b, int c, size_t len)
+char	*strdup(const char *s1)
 {
-	size_t i;
+	int		i;
+	char *	str;
 
 	i = 0;
-	while(i < len)
-	{
-		b[i] = c;
-		i++;
-	}
-	return((unsigned char *)b);
-}
+	str = (char *)malloc((sizeof(*str) * (ft_strlen(str)) + 1);
+	
