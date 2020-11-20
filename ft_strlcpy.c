@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<libft.h>
+#include <libft.h>
 
-size_t	strlcpy(char *dest, const char*src, size_t dstsize)
+size_t	strlcpy(char *dest, const char *src, size_t dstsize)
 {
 	size_t i;
 

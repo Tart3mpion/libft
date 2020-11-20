@@ -10,7 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+#include <libft.h>
+
+int	ft_toupper(int c)
 {
-	c = c - 32;
+	if(ft_isalpha(c) == 1)
+		c = c - 32;
+	return (c);
 }
