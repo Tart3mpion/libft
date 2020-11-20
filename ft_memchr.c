@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 09:29:55 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/20 10:32:30 by ldes-cou         ###   ########.fr       */
+/*   Created: 2020/11/20 10:08:31 by ldes-cou          #+#    #+#             */
+/*   Updated: 2020/11/20 10:20:22 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char *strchr(const char *s, int c)
+void *(const void *s, int c, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
-	while(*s)
+	while(i < n)
 	{
 		if(s[i] == c)
-			return((char *)s + i);
+			return((unsigned char *)s + i);
 		i++;
 	}
-	if(s[i] == c)
-		return((char *)s + i);
-	return(NULL);
+	return (NULL);
 }

@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 09:29:55 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/20 10:32:30 by ldes-cou         ###   ########.fr       */
+/*   Created: 2020/11/20 10:20:46 by ldes-cou          #+#    #+#             */
+/*   Updated: 2020/11/20 10:30:49 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char *strchr(const char *s, int c)
+int	memcmp(const void *s1, const void s*2, size_t n)
 {
-	int i;
+	size_t i;
+	unsigned char *s1_cpy;
+	unsigned char *s2_cpy;
 
 	i = 0;
-	while(*s)
+	s1_cpy = (unsigned char *)s1;
+	s2_cpy = (unsigned char *)s2;
+	while(*s1 && *s2)
 	{
-		if(s[i] == c)
-			return((char *)s + i);
+		if(s1_cpy[i] != s2_cpy[i])
+			return((s1_cpy - s2_cpy);
 		i++;
 	}
-	if(s[i] == c)
-		return((char *)s + i);
-	return(NULL);
+	return(0);
 }
+
+		
