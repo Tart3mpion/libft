@@ -1,7 +1,9 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include<stdlib.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
 int	ft_atoi(const char *str);
 char	*ft_strdup(const char *s1);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
