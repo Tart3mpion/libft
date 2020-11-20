@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ldes-cou <ldes-cou>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 15:55:24 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/19 18:29:58 by ldes-cou         ###   ########.fr       */
+/*   Created: 2020/11/19 18:09:32 by ldes-cou          #+#    #+#             */
+/*   Updated: 2020/11/19 18:38:51 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void *memset(void *b, int c, size_t len)
+void	bzero(void *s, size_t n)
 {
-	size_t i;
+	size_t n;
 
-	i = 0;
-	while(i < len)
+	n = 0;
+	while(i < n)
 	{
-		*(b + i) = c;
+		s[i] == '\0';
 		i++;
 	}
-	return(unsigned char *(b));
-}
+}	
