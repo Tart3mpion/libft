@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/20 12:06:17 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/23 14:57:18 by ldes-cou         ###   ########.fr       */
+/*   Created: 2020/11/23 18:16:04 by ldes-cou          #+#    #+#             */
+/*   Updated: 2020/11/23 18:52:43 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	char	*dst_cpy;
-	char	*src_cpy;
+	char str;
+	int i;
 
 	i = 0;
-	dst_cpy = (char *)dst;
-	src_cpy = (char *)src;
-	while (i < n)
+	str = (char *)malloc(sizeof(s*)) * (len + 1)
+	if(!str)
+		return (NULL);
+	while(i < len)
 	{
-		dst_cpy[i] = src_cpy[i];
+		str[i] == s[start + i];
 		i++;
 	}
-	return (dst);
+	str[i] = '\0';
+	return (str);
 }
-
+	

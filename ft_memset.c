@@ -6,7 +6,7 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:55:24 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/20 11:56:27 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/23 15:01:55 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 void *memset(void *b, int c, size_t len)
 {
-	size_t i;
+	unsigned char *ptr;
+	ptr = (unsigned char *)b;
 
-	i = 0;
 	while(i < len)
 	{
-		b[i] = c;
-		i++;
+		*ptr++ = (unsigned char)c;
 	}
-	return((unsigned char *)b);
+	return(b);
 }
