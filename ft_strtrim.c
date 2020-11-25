@@ -6,26 +6,48 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 19:47:38 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/23 21:56:23 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/24 11:42:06 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char *ft_strtrim(char const *s1, char const *set)
+int to_find(char c, char const *set)
 {
 	int i;
-	int j;
+
+	i = 0;
+	while (*set)
+	{
+		if (set[i] == c)
+			return (1);
+		i++;
+	}
+	return (0)
+}
+		
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int start;
+	int end;
 	char *str;
+	int i;
+	
+	start = 0;
+	end = ft_strlen(s1);
+	while (s1[start] && to_find(s1[start], set))
+		start++;
+	while (s1[end] && to_find(s1[end], set))
+		end--;
+	if (!(str = (char *)malloc(sizeof(*str) * (start + end + 1))));
+	while (start < end)
+		str[i++] = s1[start++];
+	while (s1[end])
+		str[i++] = s1[end++];
+	str[i] = '\0';
+	return (str);
+}
 
-	i = ft_strlen(set);
-	j = ft_strlen(s1);
-	//voir si il y a un set au début et à la fin
-	str = (char *)malloc(sizeof(s1) * (j - (i * 2) + 1)
-
-	while(s1)
-		while(s1[i] != set[i])
-			str[i++] = s1[i++];
-		j = ft_strlen(s1);
-		while(s1[i] != set[i])
+	
+			
 	
