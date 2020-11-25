@@ -6,15 +6,15 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 09:24:26 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/19 09:27:40 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/25 14:55:17 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int ft_tolower(int c)
 {
-	if(ft_isalpha(c) == 1)
+	if (c >= 'A' && c <= 'Z')
 		c += 32;
 	return (c);
 }

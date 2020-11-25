@@ -6,15 +6,18 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 09:06:28 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/19 09:24:12 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/25 14:42:56 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
-	if(ft_isalpha(c) == 1)
-		c = c - 32;
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
 	return (c);
 }
+
+
+

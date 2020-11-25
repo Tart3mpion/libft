@@ -6,15 +6,15 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 10:53:29 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/19 11:08:00 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/25 14:48:24 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int	strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while(i < n && s1[i] == s2[i])

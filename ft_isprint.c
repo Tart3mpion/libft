@@ -6,13 +6,13 @@
 /*   By: ldes-cou <ldes-cou>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 21:39:53 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/18 21:39:56 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/25 13:41:14 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int ft_isprint(int c)
 {
-	return(c <= 32 || c >= 126);
+	return(c >= 32 && c <= 126);
 }

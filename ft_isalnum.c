@@ -6,13 +6,13 @@
 /*   By: ldes-cou <ldes-cou>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 21:37:07 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/19 15:36:20 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/25 13:20:27 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int ft_isalnum(int c)
 {
-	return(ft_isdigit(c) || ft_isalpha(c));
+	return (ft_isdigit(c) || ft_isalpha(c));
 }

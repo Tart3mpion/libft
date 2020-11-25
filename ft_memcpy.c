@@ -6,11 +6,11 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 12:06:17 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/23 14:57:18 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/25 15:11:13 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	dst_cpy = (char *)dst;
 	src_cpy = (char *)src;
+	if ((dst_cpy == 0) || (src_cpy == 0))
+		return (NULL);
 	while (i < n)
 	{
 		dst_cpy[i] = src_cpy[i];

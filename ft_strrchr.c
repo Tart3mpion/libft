@@ -6,18 +6,17 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 09:43:40 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/19 10:52:26 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/25 16:19:56 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int i;
 	
 	i = 0;
-	ft_strlen(s)
 	while(*s)
 	{
 		if(s[i] == c)
@@ -30,4 +29,4 @@ char	*strrchr(const char *s, int c)
 }
 
 
-				
+			

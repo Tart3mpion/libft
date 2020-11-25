@@ -6,24 +6,24 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 09:29:55 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/20 11:50:30 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/25 15:07:42 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char *strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int i;
 
 	i = 0;
-	while(*s)
+	while(s[i])
 	{
 		if(s[i] == c)
 			return((char *)s + i);
 		i++;
 	}
-	if(s[i] == c)
-		return((char *)s + i);
-	return(NULL);
+	if (s[i] == '\0' && c == '\0')
+		return ((char *)s + i);	
+	return (NULL);
 }

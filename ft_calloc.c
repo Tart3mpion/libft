@@ -6,9 +6,11 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 11:56:49 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/20 12:42:37 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/25 16:35:44 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -16,12 +18,13 @@ void	*ft_calloc(size_t count, size_t size)
 	void *str;
 	
 	i = 0;
-	if(count == 0 || size == 0)
-		return (NULL);
 	str = malloc(size * count);
+	if (!str)
+		return (NULL);
+	
 	while(i < count)
 	{
-		(char *)str[i] = 0;
+		((char *)str)[i] = 0;
 		i++;
 	}
 	return (str);
