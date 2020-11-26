@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ldes-cou <ldes-cou@student@42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 10:53:29 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/26 12:26:38 by ldes-cou         ###   ########.fr       */
+/*   Created: 2020/11/26 15:04:12 by ldes-cou          #+#    #+#             */
+/*   Updated: 2020/11/26 15:33:14 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+static len_nb(int nb)
 {
-	size_t i;
-
-	i = 0;
-	while(i < n)
-		if (s1[i] && s2[i] && s1[i] == s2[i])
-			i++;
-		else
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-	return (0);
+	int len = 0;
+	if (nb <= 0)
+		++len;
+	while (nb != 0)
+	{
+		++len;
+		nb = nb / 10;
+	}
+	return (len);
 }
+char	*itoa(int n)
+{
+	
 

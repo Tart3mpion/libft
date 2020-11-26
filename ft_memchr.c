@@ -6,7 +6,7 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 10:08:31 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/25 12:29:02 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/26 11:54:23 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	str = (unsigned char *)s;
-	a  = (unsigned char)c;
-	while(i < n)
+	a = (unsigned char)c;
+	while (i < n)
 	{
-		if(str[i] == a)
+		if(*str == a)
 			return(str);
 		i++;
+		str++;
 	}
 	return (NULL);
 }

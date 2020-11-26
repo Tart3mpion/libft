@@ -6,7 +6,7 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 18:43:09 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/25 16:03:15 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/26 14:37:12 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,22 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int j;
 
 	i = ft_strlen(s1) + ft_strlen(s2) + 1;
-	str = (char *)malloc(sizeof(char *) * i);
+	str = (char *)malloc(sizeof(*s1) * i);
 	if(!str)
 		return (NULL);
 	i = 0;
 	j = 0;
-	if(s1)
-		while(s1)
+	if(s1[i])
+		while(s1[i])
 		{
 			str[i] = s1[i];
 			i++;
 		}
-	if(s2)
-		while(s2)
+	if(s2[j])
+		while(s2[j])
 		{
-			str[i] = s2[i + j];
+			str[i] = s2[j];
+			j++;
 			i++;
 		}
 	str[i] = '\0';

@@ -6,7 +6,7 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 11:56:49 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/25 16:35:44 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/26 10:18:00 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,14 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	size_t	i;
 	void *str;
+	int len;
 	
 	i = 0;
-	str = malloc(size * count);
+	len = (size * count); 
+	str = malloc(len);
 	if (!str)
 		return (NULL);
-	
-	while(i < count)
+	while(len--)
 	{
 		((char *)str)[i] = 0;
 		i++;

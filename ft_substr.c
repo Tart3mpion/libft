@@ -6,7 +6,7 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 18:16:04 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/25 16:04:27 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/26 14:31:42 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,23 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char *str;
 	size_t i;
+	size_t j;
 
+	j = 0;
 	i = 0;
-	str = (char *)malloc(sizeof(char *) * (len + 1));
+	str = (char *)malloc(sizeof(*s) * (len + 1));
 	if(!str)
 		return (NULL);
-	while(i < len)
+	while (s[i])
 	{
-		str[i] = s[start + i];
+		if (i >= start && j < len)
+		{
+			str[j] = s[i];
+			j++;
+		}
 		i++;
 	}
-	str[i] = '\0';
+	str[j] = '\0';
 	return (str);
 }
 	
