@@ -6,7 +6,7 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 09:24:21 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/26 11:23:05 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/26 20:52:37 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void *ft_memmove(void *dst, const void *src, size_t len)
 {
+	if ((dst == NULL) && (src == NULL))
+        	return (NULL);
 	if (src <= dst)
 		while (len > 0)
 		{

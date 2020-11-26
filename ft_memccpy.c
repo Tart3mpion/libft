@@ -6,7 +6,7 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 09:39:18 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/26 11:14:58 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/11/26 21:17:20 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	{
 		dst_cpy[i] = src_cpy[i];
 		if(src_cpy[i] == (unsigned char)c)
-			return (dst + i);
+			return (dst + i + 1);
 		i++;
 	}
 	return (NULL);
