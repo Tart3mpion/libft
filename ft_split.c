@@ -6,7 +6,7 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 11:42:41 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/30 17:51:19 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/12/01 12:26:03 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,10 @@
 static int ft_len_word(const char *s, int start, char c)
 {
 	int i;
-	
-	i = 0;
 
-	while (s[start] == c)
-		start++;
+	i = 0;
 	while (s[start] != c && s[start] != '\0')
-	{
+	{	
 		i++;
 		start++;
 	}
@@ -58,12 +55,14 @@ char		**ft_split(const char *s, char c)
 	nb_word = ft_num_word(s, c);
 	if (!(array = (char **)malloc(sizeof(char *) * (nb_word +1))))
 		return (NULL);
-	while (s[i] && i < nb_word)
-	{	
+	while (i < nb_word)
+	{
+		while (s[start] == c)
+			start++;
 		len = ft_len_word(s, start, c);
-		array[i] = ft_substr(s, start, len);
-		start = start + len + 1;
-		i++;
+		array[i++] = ft_substr(s, start, len);
+		start += len + 1;
+	
 	}
 	array[i] = NULL;
 	return (array);
@@ -74,7 +73,14 @@ int main()
 	int i;
 	char **array;
 	
-	array = ft_split("salut la compagnie !", ' ');
+	i = 0;
+	array = ft_split("      salut    la   compagnie !  ", ' ');
  	while(i <  4)
+	{
 		printf("%s", array[i]);
+		printf("%c", '\n');
+		i++;
+	}
+	return (0);
+		
 }
