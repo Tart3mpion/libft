@@ -6,12 +6,11 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 11:42:41 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/12/01 12:26:03 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/12/02 11:04:00 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int ft_len_word(const char *s, int start, char c)
 {
@@ -66,21 +65,4 @@ char		**ft_split(const char *s, char c)
 	}
 	array[i] = NULL;
 	return (array);
-}
-
-int main()
-{
-	int i;
-	char **array;
-	
-	i = 0;
-	array = ft_split("      salut    la   compagnie !  ", ' ');
- 	while(i <  4)
-	{
-		printf("%s", array[i]);
-		printf("%c", '\n');
-		i++;
-	}
-	return (0);
-		
 }
