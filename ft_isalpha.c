@@ -6,13 +6,13 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 14:58:52 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/25 11:59:20 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/12/03 09:47:16 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int c)
-{	
-	return((c >= 'a' && c <= 'z') || (c >= 'A' && c <='Z'));
+int	ft_isalpha(int c)
+{
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

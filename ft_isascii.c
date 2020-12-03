@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldes-cou <ldes-cou>                        +#+  +:+       +#+        */
+/*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 21:37:53 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/25 13:43:03 by ldes-cou         ###   ########.fr       */
+/*   Created: 2020/12/03 09:51:00 by ldes-cou          #+#    #+#             */
+/*   Updated: 2020/12/03 09:51:16 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-	return( c >= 0 && c <= 127);
+	return (c >= 0 && c <= 127);
 }
