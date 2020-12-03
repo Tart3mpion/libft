@@ -6,7 +6,7 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:55:24 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/12/03 10:01:20 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/12/03 10:09:13 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char *ptr;
-	size_t i;
+	unsigned char	*ptr;
+	size_t			i;
 
-	i = 0;	
+	i = 0;
 	ptr = (unsigned char *)b;
 	while (len--)
 	{

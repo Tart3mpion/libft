@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldes-cou <ldes-cou@student@42.fr>          +#+  +:+       +#+        */
+/*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 09:13:27 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/11/30 09:23:06 by ldes-cou         ###   ########.fr       */
+/*   Created: 2020/12/03 10:43:50 by ldes-cou          #+#    #+#             */
+/*   Updated: 2020/12/03 10:43:58 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		ft_putstr_fd(char *s, int fd)
 {
-	if(fd < 0 || !s)
+	if (fd < 0 || !s)
 		return ;
 	while (*s)
 	{

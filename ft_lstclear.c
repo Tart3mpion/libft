@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldes-cou <ldes-cou@student@42.fr>          +#+  +:+       +#+        */
+/*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/02 09:24:58 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/12/02 10:50:58 by ldes-cou         ###   ########.fr       */
+/*   Created: 2020/12/03 10:52:47 by ldes-cou          #+#    #+#             */
+/*   Updated: 2020/12/03 10:53:30 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list *tmp;
-	
+
 	if (lst)
 	{
 		while (*lst)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldes-cou <ldes-cou@student@42.fr>          +#+  +:+       +#+        */
+/*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 09:07:53 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/12/01 09:13:45 by ldes-cou         ###   ########.fr       */
+/*   Created: 2020/12/03 10:50:35 by ldes-cou          #+#    #+#             */
+/*   Updated: 2020/12/03 10:50:37 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int size;;
+	int size;
 
 	size = 0;
 	while (lst)

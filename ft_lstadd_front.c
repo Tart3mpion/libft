@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldes-cou <ldes-cou@student@42.fr>          +#+  +:+       +#+        */
+/*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 08:58:32 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/12/01 09:07:33 by ldes-cou         ###   ########.fr       */
+/*   Created: 2020/12/03 10:48:24 by ldes-cou          #+#    #+#             */
+/*   Updated: 2020/12/03 10:48:59 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ void	ft_lstadd_front(t_list **alst, t_list *new)
 {
 	if (alst && new)
 	{
-		new -> next = *alst;
-		*alst = new ;
+		new->next = *alst;
+		*alst = new;
 	}
 }
-
-	
