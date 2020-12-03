@@ -6,7 +6,7 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 10:43:50 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/12/03 10:43:58 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/12/03 15:14:04 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		ft_putstr_fd(char *s, int fd)
 {
-	if (fd < 0 || !s)
+	if (fd < 0)
 		return ;
 	while (*s)
 	{
