@@ -6,7 +6,7 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 11:01:48 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/12/03 15:20:55 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/12/03 17:30:21 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct		s_list
 
 int					ft_atoi(const char *str);
 char				*ft_strdup(const char *s1);
-char				*ft_strnstr(const char *stack, const char *needle, size_t len);
+char				*ft_strnstr(const char *s, const char *n, size_t len);
 void				ft_bzero(void *s, size_t n);
 void				*ft_calloc(size_t count, size_t size);
 int					ft_isalpha(int c);

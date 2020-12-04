@@ -6,30 +6,30 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:28:12 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/12/03 13:44:26 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/12/03 17:31:53 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *stack, const char *needle, size_t len)
+char	*ft_strnstr(const char *s, const char *n, size_t len)
 {
 	size_t i;
 	size_t x;
 
 	i = 0;
-	if (*needle == '\0')
-		return ((char *)stack);
-	while (stack[i] && i < len)
+	if (*n == '\0')
+		return ((char *)s);
+	while (s[i] && i < len)
 	{
 		x = 0;
-		if (stack[i] == needle[x])
+		if (s[i] == n[x])
 		{
-			while ((i + x) < len && stack[x + i] == needle[x])
+			while ((i + x) < len && s[x + i] == n[x])
 			{
 				x++;
-				if (!(needle[x]))
-					return ((char *)stack + i);
+				if (!(n[x]))
+					return ((char *)s + i);
 			}
 		}
 		i++;

@@ -6,7 +6,7 @@
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 09:43:40 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/12/03 14:39:11 by ldes-cou         ###   ########.fr       */
+/*   Updated: 2020/12/04 09:53:57 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@ char	*ft_strrchr(const char *s, int c)
 	i = ft_strlen(s);
 	while (i >= 0)
 	{
-		if (s[i] == c)
-			return ((char *)s + i);
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
 		i--;
 	}
-	if (s[i] == c)
-		return ((char *)s + i);
 	return (NULL);
 }
