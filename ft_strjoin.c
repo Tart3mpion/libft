@@ -22,21 +22,18 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str = (char *)malloc(sizeof(*s1) * i);
 	if (!str)
 		return (NULL);
-	i = 0;
+	i = -1;
 	j = 0;
 	if (s1[i])
-		while (s1[i])
-		{
+	{
+		while (s1[++i])
 			str[i] = s1[i];
-			i++;
-		}
+	}
 	if (s2[j])
+	{
 		while (s2[j])
-		{
-			str[i] = s2[j];
-			j++;
-			i++;
-		}
+			str[i++] = s2[j++];
+	}
 	str[i] = '\0';
 	return (str);
 }

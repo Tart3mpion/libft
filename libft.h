@@ -17,13 +17,14 @@
 # include <unistd.h>
 # include <string.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
 
 int					ft_atoi(const char *str);
+long int			ft_atoli(const char *str);
 char				*ft_strdup(const char *s1);
 char				*ft_strnstr(const char *s, const char *n, size_t len);
 void				ft_bzero(void *s, size_t n);

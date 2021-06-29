@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft.atoli.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldes-cou <ldes-cou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 11:37:10 by ldes-cou          #+#    #+#             */
-/*   Updated: 2020/12/03 09:43:15 by ldes-cou         ###   ########.fr       */
+/*   Created: 2021/12/06 10:52:47 by ldes-cou          #+#    #+#             */
+/*   Updated: 2021/12/06 16:07:35 by ldes-cou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
+long int	ft_atoli(const char *str)
 {
-	size_t	i;
+	long int	i;
+	long int	nb;
+	int			sign;
 
+	nb = 0;
+	sign = 1;
 	i = 0;
-	if (dstsize <= 0)
-		return (ft_strlen(src));
-	while (src[i] && (i < dstsize - 1))
+	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		dest[i] = src[i];
+		if (str[i++] == '-')
+			sign = -1;
+	}
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	{
+		nb = nb * 10 + (str[i] - 48);
 		i++;
 	}
-	dest[i] = '\0';
-	return (ft_strlen(src));
+	return (nb * sign);
 }
